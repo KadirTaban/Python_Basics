@@ -8,7 +8,7 @@ if (kart_numarası==000000 and kart_sifre==00):
     a = input("""opsiyonları seçiniz 
             Çıkmak için : q
             para yatırma : b
-            para çekme : x
+            para çekme : c
 
             """)
 
