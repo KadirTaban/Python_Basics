@@ -6,7 +6,8 @@ class Kart:
         self.deger = deger
 
     def __repr__(self):
-        return f"{self.tip} {self.deger}"
+
+        return f" {self.tip} {self.deger}"
 
 
 class Deste:
@@ -14,9 +15,14 @@ class Deste:
     tipler = ["karo","sinek","kupa","maça"]
 
     degerler= ["a","2","3","4","5","6","7","8","9","10","J","Q","K"]
+
+
     def __init__(self):
 
         self.kartlar=[Kart(tip,deger) for tip in Deste.tipler for deger in Deste.degerler]
+    def __iter__(self):
+        #return self
+        return  iter(self.kartlar)
 
     def kartSayisi(self):
         return len(self.kartlar)
@@ -36,9 +42,12 @@ class Deste:
     def kartAt(self):
         return self.kartDagit(1)
 destek=Deste()
-destek.kartlarKaristir()
-destek.kartDagit(15)
-destek.kartlarKaristir()
-print(destek.kartlar)
-print(len(destek.kartlar))
-print(destek.kartSayisi())
+for kart in destek.kartlar:
+
+    print(kart)
+#destek.kartlarKaristir()
+#destek.kartDagit(15)
+#destek.kartlarKaristir()
+#print(destek.kartlar)
+#print(len(destek.kartlar))
+#print(destek.kartSayisi())
