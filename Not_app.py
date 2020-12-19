@@ -34,7 +34,7 @@ def not_hesapla(satir):
 
 
 def ortalamalari_oku():
-    with open("sinav_notlari.txt","r",encoding="utf-8") as file:
+    with open("sinavnote.txt","r",encoding="utf-8") as file:
         for satir in file:
             print(not_hesapla(satir))
 
@@ -46,12 +46,12 @@ def not_gir():
     not2 = input('not 2: ')
     not3 = input('not 3: ')
 
-    with open("sinav_notlari.txt","a", encoding="utf-8") as file:
+    with open("sinavnote.txt","a", encoding="utf-8") as file:
         file.write(ad+' '+ soyad+ ':'+not1+','+not2+','+not3+'\n')
 
 
 def notlari_kayitet():
-    with open('sinav_notlari.txt',"r",encoding="utf-8") as file:
+    with open('sinavnote.txt',"r",encoding="utf-8") as file:
         liste = []
 
         for i in file:
